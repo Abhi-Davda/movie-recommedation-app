@@ -1,81 +1,81 @@
-🎬 Movie Recommendation System
+# 🎬 Movie Recommendation System
+
 A content-based movie recommender built with Streamlit, leveraging machine learning and natural language processing (NLP) to suggest movies similar to user preferences.
 
-📌 What is a Recommendation System?
+## 📌 What is a Recommendation System?
+
 A recommendation system filters and predicts a user’s preferences to suggest relevant items. In this project, the system recommends movies based on their content and similarity to other titles.
 
-💡 Types of Recommendation Systems
-Collaborative Filtering
+### 💡 Types of Recommendation Systems
+
+- Collaborative Filtering
 Recommends items based on user behavior and preference patterns.
 
-Content-Based Filtering
+- Content-Based Filtering
 Suggests items similar to what a user likes, based on features like genre or description.
 
-Hybrid Models
+- Hybrid Models
 Combines collaborative and content-based approaches for improved accuracy.
 
-🚀 Our Approach: Content-Based Filtering
+### 🚀 Our Approach: Content-Based Filtering
+
 We use natural language processing (NLP) with TF-IDF vectorization on movie overviews and genres to recommend similar titles. The system analyzes movie content to identify thematic or narrative similarities.
 
-🎯 Project Objectives
-✅ Objective 1: Dataset Analysis
-Loaded dataset with 10,000 movies and 9 features
+## 🎯 Project Objectives
 
-Key features: title, overview, genre, popularity, vote_average, vote_count
+### ✅ Objective 1: Dataset Analysis
+
+- Loaded dataset with 10,000 movies and 9 features
+
+- Key features: title, overview, genre, popularity, vote_average, vote_count
 
 Source: TMDB API dataset
 
-✅ Objective 2: Data Cleaning & Preprocessing
-Handled missing values (replaced with empty strings)
+### ✅ Objective 2: Data Cleaning & Preprocessing
 
-Encoded categorical variables (genres)
+- Handled missing values (replaced with empty strings)
 
-Normalized numerical columns
+- Encoded categorical variables (genres)
 
-Combined overview and genre to form text features
+- Normalized numerical columns
 
-Applied TF-IDF Vectorization for text feature extraction
+- Combined overview and genre to form text features
 
-✅ Objective 3: Model Building
-Implemented and evaluated multiple models:
+- Applied TF-IDF Vectorization for text feature extraction
 
-Random Forest Regressor (n_estimators=50)
+### ✅ Objective 3: Model Building
 
-K-Nearest Neighbors (n_neighbors=5)
+- Implemented and evaluated multiple models:
 
-K-Means Clustering (n_clusters=5) for unsupervised grouping
+- Random Forest Regressor (n_estimators=50)
 
-✅ Objective 4: Model Evaluation
-Model MSE R² Score
-Random Forest 0.118706 0.8813
-KNN 0.707801 0.2922
+- K-Nearest Neighbors (n_neighbors=5)
 
-📈 Best Model: Random Forest Regressor
+- K-Means Clustering (n_clusters=5) for unsupervised grouping
 
-🧠 Accuracy (R² Score): 88.13%
+### ✅ Objective 4: Model Evaluation
 
-📉 Clustering Quality (Silhouette Score): 0.0044
+- Random Forest - MSE Score: 0.118706, R² Score: 0.8813
 
-✅ Objective 5: Model Optimization
-Tuned hyperparameters for efficiency:
+- KNN - MSE Score: 0.707801, R² Score: 0.2922
 
-n_estimators=50, n_jobs=-1
+- 📈 Best Model: Random Forest
 
-Simplified model structure for deployment
+- 🧠 Accuracy (R² Score): 88.13%
 
-Added error handling and data validation
+### ✅ Objective 5: Model Optimization
 
-✅ Objective 6: Visualization & Results
-📊 R² Score Comparison
-Bar chart comparing model scores
+- Tuned hyperparameters for efficiency:
 
-🧬 Cluster Distribution
-Shows distribution of movies across 5 clusters
+- n_estimators=50, n_jobs=-1
 
-<sub>Visuals are rendered dynamically in the Streamlit app.</sub>
+- Simplified model structure for deployment
 
-🎥 Sample Recommendations
-For the movie “Iron Man”, the system recommends:
+- Added error handling and data validation
+
+### 🎥 Sample Recommendations
+
+- For the movie “Iron Man”, the system recommends:
 
 Tau
 
@@ -87,28 +87,30 @@ Iron Man 3
 
 Iron Man 2
 
-These recommendations reflect genre similarity and franchise alignment, demonstrating successful content-based matching.
+- These recommendations reflect genre similarity and franchise alignment, demonstrating successful content-based matching.
 
-📦 Technologies Used
-Python
+### 📦 Technologies Used
 
-Pandas, NumPy
+- Python
 
-Scikit-learn
+- Pandas, NumPy
 
-Matplotlib, Seaborn
+- Scikit-learn
 
-Streamlit
+- Matplotlib, Seaborn
 
-NLP (TF-IDF)
+- Streamlit
 
-🛠️ How to Run
-bash
-Copy
-Edit
+- NLP (TF-IDF)
+
+### 🛠️ How to Run
+
+```python
 pip install streamlit pandas matplotlib seaborn scikit-learn
 streamlit run app.py
-Make sure dataset.csv is in the same directory.
+```
+
+- Make sure dataset.csv is in the same directory.
 
 🙌 Contributions
 Pull requests and suggestions are welcome!
